@@ -1,0 +1,280 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: inherit;
+}
+
+html {
+    background-image: linear-gradient(to bottom, #a6c1ee 20%,#fbc2eb 100%);
+    width: 100%;
+}
+
+body{
+    font-family:cursive;
+    position: relative;
+}
+
+.center-line {
+    text-align: center;
+}
+
+
+@keyframes showEffect {
+    from {
+        transform: translateY(-20px); 
+        opacity: 0.5;
+    }
+    to { 
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Dashboard */
+.dashboard{
+    width: 448px;
+    padding: 16px 16px 14px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background-image: linear-gradient( 120deg, #fdfbfb 0%, #ebedee 100%);
+    position:fixed;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+/* header */
+header{
+    position: relative;
+}
+
+header h4{
+    color:#ec1f55;
+}
+
+header h2 {
+    margin-top: 2px;
+}
+
+header .add-btn {
+    position:absolute;
+    right:0;
+    top:5px;
+    font-size: 18px;
+    color:#ec1f55;
+    cursor: pointer;
+}
+
+header .favourite-btn{
+    position:absolute;
+    top: 25px;
+    left: 0px;
+    height: 32px;
+    width: 32px;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 50%;
+    color:white;
+    cursor: pointer;
+}
+
+.favourite-btn i {
+    color:#666;
+}
+
+.favourite-btn:hover {
+    transition: all 0.3s ease;
+    background-color:#d3d3d3;
+}
+
+.favourite-btn.active i{
+    color: red;
+}
+
+/* cd spin */
+.cd{
+    display: flex;
+    width: 200px;
+    margin: 10px auto;
+}
+
+.cd .cd-thumb {
+    width: 100%;
+    padding-top: 100%;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* control */
+.control {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0 10px 0;
+}
+
+.control .btn{
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.control .hover:hover{
+    transition: all 0.3s ease;
+    color:#db548c;
+    background-color:#d3d3d3;
+}
+
+.btn-repeat.active {
+    color:#db548c;
+}
+
+.btn-random.active {
+    color:#db548c;
+}
+
+.btn-play-toggle i{
+    color: red;
+    border-radius:50%;
+    font-size: 60px;
+}
+
+.btn-play-toggle i:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.btn-play-toggle.playing .fa-play-circle {
+    display: none;
+}
+
+.fas.fa-pause-circle {
+    display: none;
+}
+
+.btn-play-toggle.playing .fa-pause-circle {
+    display: block;
+}
+
+.btn-bg{
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+/* Process */
+#process {
+    width: 100%;
+    height: 7px;   
+    background-color: #d3d3d3;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.8;
+    -webkit-appearance: none;
+
+}
+
+/* Play list */
+.playlist{
+     margin-top: 415px;
+     width: 456px;
+     padding: 5px 12px 40px;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+.playlist .song{
+    background-image: linear-gradient( 120deg, #fdfbfb 0%, #ebedee 100%);
+    margin-bottom: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    padding: 16px 20px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.song .thumb{
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    background-size: cover;
+    margin: 0 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3)
+}
+
+.song .body {
+    padding:0 16px;
+    flex: 1;
+}
+
+.playlist .song:hover{
+    background-image: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.song.active{
+    background-image: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.song.active .title{
+    color: lightseagreen;
+}
+
+.song.active .author{
+    color: #000;
+}
+
+.song:active {
+    opacity: 0.5
+}
+
+.body p{
+    color: #999999
+}
+
+.option {
+    padding: 0 6px;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.option:hover{
+    background-color: #d3d3d3;
+}
+
+.option .option-collapse{
+    position: absolute;
+    width: 190px;
+    background-color: #999999;
+    text-align: left;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    display:none;
+    animation: showEffect 0.5s ease;
+}
+
+.option-collapse .option-item {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+}
+
+.option-collapse .option-item:nth-child(1){
+    border-bottom: 0.5px solid #fff;
+}
+
+.option-collapse .option-item:hover{
+    background-color: #fff;
+    transition: all 0.5s ease;
+}
+
+.option-collapse.active{
+    display: block;
+}
