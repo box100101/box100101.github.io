@@ -1,1 +1,80 @@
-"Music Player" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+</head>
+<body>
+    <!-- Dashboard -->
+    <div class="dashboard">
+        <!-- header -->
+        <header>
+            <h4 class="center-line">Now playing:</h4>
+            <h2 class="center-line">Light switch</h2>
+            <div class="add-btn">
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="favourite-btn">
+                <i class="fas fa-heart"></i>
+            </div>
+        </header>
+        <!-- cd -->
+        <div class="cd">
+            <div class="cd-thumb" style="background-image: url(./images/LightSwitch.jpg);">
+            </div>
+        </div>
+        <!-- control -->
+        <div class="control">
+            <div class="btn btn-bg hover btn-repeat">
+                <i class="fas fa-retweet"></i>
+            </div>
+            <div class="btn btn-bg hover btn-previous">
+                <i class="fas fa-step-backward"></i>
+            </div>
+            <div class="btn btn-play-toggle">
+                <i class="fas fa-play-circle"></i>
+                <i class="fas fa-pause-circle"></i>
+            </div>
+            <div class="btn btn-bg hover btn-next">
+                <i class="fas fa-step-forward "></i>
+            </div>
+            <div class="btn btn-bg hover btn-random">
+                <i class="fas fa-random"></i>
+            </div>
+        </div>
+        <input type="range" value="0" name="" id="process">
+        <audio src="" id="audio"></audio>
+    </div>
+    <!-- playlist -->
+    <div class="playlist">
+        <div class="song">
+            <div class="thumb" style="background-image: url();">
+            </div>
+            <div class="body">
+                <h3 class="title">
+                </h3>
+                <p class="author">
+                </p>
+            </div>
+            <div class="option">
+                <i class="fas fa-ellipsis-h"></i>
+                <div class="option-collapse">
+                    <div class="option-item">
+                        <i class="fas fa-stream"></i>
+                        Add to favorite list
+                    </div>
+                    <div class="option-item">
+                        <i class="fas fa-download"></i>
+                        Download .mp3
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
